@@ -1,6 +1,12 @@
 var express = require("express");
-var app = express();
 var mongoose = require('mongoose');
+
+var app = express();
+
+//load config file
+var config = require("./config/config");
+
+//setup middlewares
 
 // Connect to mongodb
 var connect = function () {
@@ -14,7 +20,7 @@ mongoose.connection.on('disconnected', connect);
 
 //Start server
 
-app.listen(3000, function() {
+app.listen(config.port, function() {
    console.log("Starting...."); 
 });
 
