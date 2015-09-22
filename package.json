@@ -1,5 +1,5 @@
 {
-  "name": "lyricsApp",
+  "name": "paintMap",
   "version": "0.0.1",
   "description": "Test",
   "main": "app.js",
@@ -12,6 +12,7 @@
   "dependencies": {
     "express": "^4.12.4",
     "mongodb": "^2.0.33",
-    "mongoose": "^4.0.5"
+    "mongoose": "^4.0.5",
+    "body-parser":"*"
   }
 }

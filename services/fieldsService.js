@@ -23,16 +23,19 @@ module.exports = {
         queryStr = JSON.stringify(query);
                 
         var promise = Field.find(queryStr).exec()
-
-        promise.then(function(fields) {
-            console.log(fields);
-            return fields;                        
-        })
         
         return promise;
     },
+    
     getFieldsByCity: function(city, radius) {
         return "TBD";        
     },
+    
+    saveField: function(f) {
+        
+        var field = new Field(f);
+        
+        var promise = field.save();
+    }
     
 };
