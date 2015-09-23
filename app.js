@@ -6,8 +6,6 @@ var app = express();
 //load config file
 var config = require("./config/config");
 
-//setup middlewares
-
 // Connect to mongodb
 var connect = function () {
   var options = { server: { socketOptions: { keepAlive: 1 } } };
@@ -29,4 +27,3 @@ app.use(require('./routes'));
 
 //www root this could be a route too.
 //app.use(express.static("./public"));
-
